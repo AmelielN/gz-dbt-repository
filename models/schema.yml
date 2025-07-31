@@ -56,12 +56,100 @@ sources:
       - name: adwords
         identifier: raw_gz_adwords
         description: "Google AdWords campaign data"
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+        columns:
+          - name: date_date
+            description: date of the campaign
+            tests:
+            - not_null
+          - name: paid_source
+            description: source of the campaign
+          - name: campaign_key
+            description: key of the campaign
+            tests:
+            - not_null
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: price of the ads
+          - name: impression
+            description: numbers of impressions
+          - name: click 
+            description: numbers of click
       - name: bing
         identifier: raw_gz_bing
         description: "Bing Ads campaign data"
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+        columns:
+          - name: date_date
+            description: date of the campaign
+            tests:
+            - not_null
+          - name: paid_source
+            description: source of the campaign
+          - name: campaign_key
+            description: key of the campaign
+            tests:
+            - not_null
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: price of the ads
+          - name: impression
+            description: numbers of impressions
+          - name: click
+            description: numbers of click
       - name: criteo
         identifier: raw_gz_criteo
         description: "Criteo Ads campaign data"
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+        columns:
+          - name: date_date
+            description: date of the campaign
+            tests:
+            - not_null
+          - name: paid_source
+            description: source of the campaign
+          - name: campaign_key
+            description: key of the campaign
+            tests:
+            - not_null
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: price of the ads
+          - name: impression
+            description: numbers of impressions
+          - name: click
+            description: numbers of click
       - name: facebook
         identifier: raw_gz_facebook
         description: "Facebook Ads campaign data"
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+        columns:
+          - name: date_date
+            description: date of the campaign
+            tests:
+            - not_null
+          - name: paid_source
+            description: source of the campaign
+          - name: campaign_key
+            description: key of the campaign
+            tests:
+            - not_null
+          - name: camPGN_name
+            description: name of the campaign
+          - name: ads_cost
+            description: price of the ads
+          - name: impression
+            description: numbers of impressions
+          - name: click
+            description: numbers of click
