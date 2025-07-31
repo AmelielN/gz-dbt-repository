@@ -153,3 +153,19 @@ sources:
             description: numbers of impressions
           - name: click
             description: numbers of click
+
+models:
+      - name: int_campaigns_day
+        description: "Aggregated advertising campaigns data by day, combining all channels."
+        columns:
+          - name: date_date
+            description: "Date of the campaign performance (day)."
+            tests:
+              - not_null
+              - unique
+          - name: ads_cost
+            description: "Total advertising cost for that day across all channels."
+          - name: impression
+            description: "Total number of impressions across all campaigns for that day."
+          - name: click
+            description: "Total number of clicks across all campaigns for that day."
